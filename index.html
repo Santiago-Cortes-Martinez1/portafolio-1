@@ -16,12 +16,12 @@
         <div class="user">
           <img src="/src/santi.jpg" width="45px" alt="" />
           <div class="name">Santiago Cortes</div>
-          <p>Javascript developer</p>
+          <p>Full Stack developer</p>
         </div>
       </header>
 
       <div class="links">
-        <a href="#">
+        <a href="#primero">
           <div class="icon">
             <span
               class="iconify-inline"
@@ -30,31 +30,9 @@
               data-height="32px"
             ></span>
           </div>
-          <div class="title">Remote assistance</div>
+          <div class="title">¿Quien soy?</div>
         </a>
-        <a href="#">
-          <div class="icon">
-            <span
-              class="iconify-inline"
-              data-icon="flat-color-icons:calendar"
-              data-width="32px"
-              data-height="32px"
-            ></span>
-          </div>
-          <div class="title">Calendar</div>
-        </a>
-        <a href="#">
-          <div class="icon">
-            <span
-              class="iconify-inline"
-              data-icon="flat-color-icons:assistant"
-              data-width="32px"
-              data-height="32px"
-            ></span>
-          </div>
-          <div class="title">Settings</div>
-        </a>
-        <a href="#">
+        <a href="#tercero">
           <div class="icon">
             <span
               class="iconify-inline"
@@ -63,7 +41,18 @@
               data-height="32px"
             ></span>
           </div>
-          <div class="title">Analytics</div>
+          <div class="title">Projectos</div>
+        </a>
+        <a href="#cuarta">
+          <div class="icon">
+            <span
+              class="iconify-inline"
+              data-icon="flat-color-icons:assistant"
+              data-width="32px"
+              data-height="32px"
+            ></span>
+          </div>
+          <div class="title">Contactame</div>
         </a>
       </div>
     </nav>
@@ -71,7 +60,10 @@
       <header class="saludo">
         <h1>!HOLA, BIENVENIDO A MI PAGINA WEB¡</h1>
       </header>
-      <section class="primero">
+      <section class="primero" id="primero">
+        <div class="secciones-dos">
+          <img src="/src/santi.jpg" alt="" />
+        </div>
         <div class="secciones-uno">
           <h1>Santiago Cortes Martinez</h1>
           <p>
@@ -81,9 +73,6 @@
             doloremque ut facere eius?
           </p>
         </div>
-        <div class="secciones-dos">
-          <img src="/src/santi.jpg" alt="" />
-        </div>
       </section>
       <section class="segundo">
         <div class="titulo">
@@ -92,7 +81,7 @@
         <div class="lista-habilidades">
           <div class="habilidad">
             <img src="/src/js.png" alt="" />
-            <h3>JAVASCRIPT</h3>
+            <h3>JavaScript</h3>
           </div>
           <div class="habilidad">
             <img src="/src/html-5.png" alt="" />
@@ -102,37 +91,57 @@
             <img src="/src/css-3.png" alt="" />
             <h3>CSS</h3>
           </div>
-        </div>
-        <div class="lista-habilidades dos">
           <div class="habilidad">
             <img src="/src/atom.png" alt="" />
-            <h3>REACT</h3>
+            <h3>React</h3>
           </div>
           <div class="habilidad">
             <img src="/src/nodejs.png" alt="" />
-            <h3>NODEJS</h3>
+            <h3>Node.js</h3>
+          </div>
+          <div class="habilidad">
+            <img src="/src/python.png" alt="" />
+            <h3>Python</h3>
+          </div>
+          <div class="habilidad">
+            <img src="/src/mongo.png" alt="" />
+            <h3>MongoDB</h3>
+          </div>
+          <div class="habilidad">
+            <img src="/src/django.png" alt="" />
+            <h3>Django</h3>
           </div>
         </div>
       </section>
-      <section class="tercero">
+      <section class="tercero" id="tercero">
         <div class="titulo">
           <h3>PROYECTOS</h3>
         </div>
         <div class="lista-proyectos">
           <div class="fila uno">
-            <a href="#" class="proyectos">
-              <img src="/src/chango.jpg" alt="" />
-            </a>
-            <a href="#" class="proyectos">
-              <img src="/src/chango.jpg" alt="" />
-            </a>
-          </div>
-          <div class="fila dos">
             <a
               href="https://santyago-proyecto-react2.netlify.app/"
               class="proyectos"
             >
               <img src="/src/clima.jpeg" alt="" />
+            </a>
+            <a
+              href="https://dino-game-santyagocm.netlify.app/"
+              class="proyectos"
+            >
+              <img src="/src/dino-game.jpg" alt="" />
+            </a>
+            <a
+              href="https://react-crud-app-santiagoc.netlify.app/"
+              class="proyectos"
+            >
+              <img src="/src/crud.jpg" alt="" />
+            </a>
+            <a
+              href="https://app-rickandmorty-santiago.netlify.app/"
+              class="proyectos"
+            >
+              <img src="/src/rickandmorty.jpg" alt="" />
             </a>
             <a href="https://proyecto-1-react.netlify.app/" class="proyectos">
               <img src="/src/frases.jpeg" alt="" />
@@ -140,7 +149,7 @@
           </div>
         </div>
       </section>
-      <section class="cuarta">
+      <section class="cuarta" id="cuarta">
         <h2>CONTACTAME</h2>
         <h5>PUEDES MANDARME UN MENSAJE POR EL FORMULARIO DE ABAJO</h5>
         <div class="formulario">
@@ -161,12 +170,22 @@
       <footer>
         <h5>Contacto</h5>
         <div class="datos-contacto">
-          <a href="#" class="datos"><img src="/src/facebook.png" alt="" /></a>
-          <a href="#" class="datos"><img src="/src/instagram.png" alt="" /></a>
-          <a href="#" class="datos"><img src="/src/linkedin.png" alt="" /> </a>
-          <a href="#" class="datos"><img src="/src/gorjeo.png" alt="" /></a>
+          <a href="https://www.facebook.com/santyago.cm" class="datos"
+            ><img src="/src/facebook.png" alt=""
+          /></a>
+          <a href="https://www.instagram.com/santyao476/" class="datos"
+            ><img src="/src/instagram.png" alt=""
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/santiago-cortes-7043a8251/"
+            class="datos"
+            ><img src="/src/linkedin.png" alt="" />
+          </a>
+          <a href="https://github.com/santi-cortes" class="datos"
+            ><img src="/src/github-sign.png" alt=""
+          /></a>
         </div>
-        <h4>Derechos de autor: @Santiago Cortes</h4>
+        <h4>Hecho por Santiago Cortes</h4>
       </footer>
     </div>
     <script src="/particles.min.js"></script>

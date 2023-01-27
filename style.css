@@ -1,18 +1,20 @@
 :root {
   --width: 230px;
+  --chart: rgb(51, 253, 0);
+  --fill: rgba(0, 255, 60, 0.185);
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: monospace;
   padding: 0px;
   margin: 0px;
-  background-color: rgb(255, 255, 255);
-  color: black;
+  background-color: rgb(5, 5, 5);
+  color: rgb(255, 255, 255);
 }
 
 #particles-js {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   z-index: -1;
 }
@@ -22,7 +24,7 @@ nav {
   display: flex;
   flex-direction: column;
   width: 56px;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.916);
   overflow: visible;
   left: 0px;
   top: 0px;
@@ -35,7 +37,7 @@ nav {
 }
 
 nav .texto {
-  color: white;
+  color: rgb(0, 0, 0);
   transform: rotate(90deg);
   padding-left: 20px;
   transition: opacity 0.3s ease;
@@ -50,7 +52,7 @@ nav:hover {
 }
 
 nav .user {
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
@@ -62,7 +64,7 @@ nav .user {
 }
 
 nav .user p {
-  font-size: medium;
+  font-size: large;
 }
 
 nav .user img {
@@ -76,8 +78,12 @@ nav:hover .user {
   opacity: 1;
 }
 
+nav .links {
+  margin-top: 45px;
+}
+
 nav .links a {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -119,43 +125,51 @@ nav:hover .links a .title {
 }
 
 .caja-principal .saludo {
-  height: 50px;
+  font-family: monospace;
+  height: 90px;
+  width: 100%;
   padding-left: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(0, 0, 0);
-  color: white;
-  position: relative;
+  background-color: rgba(255, 255, 255, 0.903);
+  color: rgb(0, 0, 0);
+  position: absolute;
+  left: 0;
   z-index: 1;
 }
 
 .caja-principal .saludo h1 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 25px;
 }
 
 .primero {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 50px;
   height: 90vh;
   background-color: rgba(29, 29, 61, 0);
   position: relative;
   z-index: 1;
-  padding: 10px;
+  padding: 25px;
+  margin-top: 60px;
 }
 
 .primero .secciones-uno {
+  font-size: 21px;
   margin-left: 10px;
-  height: 60%;
+  height: 300px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 60%;
-  background-color: rgba(88, 150, 152, 0.398);
+  background-color: var(--fill);
+  border-radius: 18px;
   margin-right: 10px;
   padding: 5px;
-  border: solid 2px rgb(255, 255, 255);
+  border: solid 5px var(--chart);
   box-shadow: -4px 4px 6px rgba(193, 193, 193, 0.452);
 
   transition: all 0.4s ease-in-out;
@@ -175,12 +189,13 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 90%;
-  width: 40%;
+  height: 350px;
+  width: 400px;
+  border-radius: 25px;
   align-items: center;
-  background-color: rgba(88, 150, 152, 0.398);
+  background-color: rgba(0, 255, 60, 0.267);
   padding: 5px;
-  border: solid 2px rgb(255, 255, 255);
+  border: solid 5px rgb(45, 225, 0);
   box-shadow: -4px 4px 6px rgba(193, 193, 193, 0.452);
 
   transition: all 0.3s ease-in-out;
@@ -193,54 +208,60 @@ p {
 
 .primero .secciones-dos img {
   width: 300px;
-  border-radius: 50%;
+  border-radius: 100px;
 }
 
 .segundo {
   background-color: transparent;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   gap: 60px;
+  position: relative;
 }
 
 .segundo .titulo {
-  padding: 10px;
-  background-color: rgba(88, 150, 152, 0.398);
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 15px;
+  background-color: var(--fill);
+  font-family: monospace;
   font-size: 28px;
-  border: outset 5px rgba(255, 254, 254, 0.898);
-  box-shadow: -6px 6px 8px rgba(121, 121, 121, 0.814);
+  border: outset 5px var(--chart);
+  box-shadow: -4px 4px 6px rgba(121, 121, 121, 0.814);
   border-radius: 8px;
   overflow: hidden;
   display: flex;
-  height: 50px;
+  height: 100%;
   align-self: center;
   align-items: center;
-  margin: 50px;
+  margin: 0 50px 80px 50px;
 }
 
 .segundo .lista-habilidades {
   display: flex;
+  width: fit-content;
+  gap: 20px;
   justify-content: center;
-  margin-bottom: 25px;
-  width: 90vw;
-  height: 18vw;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .segundo .lista-habilidades .habilidad {
   padding: 10px;
-  margin: 10px;
-  border: solid 3px rgb(233, 233, 233);
+  margin: 20px;
+  border: solid 3px var(--chart);
   width: 140px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(88, 150, 152, 0.398);
-  border-radius: 5px;
+  background-color: var(--fill);
+  border-radius: 20px;
   animation: float 2s infinite ease-in-out;
 }
 
@@ -250,8 +271,8 @@ p {
     box-shadow: -5px 5px 4px rgba(49, 49, 49, 0.452);
   }
   50% {
-    transform: translate(6px, -6px);
-    box-shadow: -7px 7px 10px rgba(193, 193, 193, 0.452);
+    transform: translate(3px, -3px);
+    box-shadow: -5px 5px 8px rgba(193, 193, 193, 0.452);
   }
 
   100% {
@@ -262,36 +283,37 @@ p {
 
 .segundo .lista-habilidades .habilidad img {
   width: 100px;
+  padding: 5px;
 }
 
 /* Lista de proyectos */
 
 .tercero {
-  margin-top: 60px;
   background-color: transparent;
-  height: 100vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  gap: 80px;
+  gap: 50px;
+  margin-top: 25px;
 }
 
 .tercero .titulo {
   padding: 15px;
+  display: flex;
   justify-content: center;
   align-self: center;
-  background-color: rgba(88, 150, 152, 0.398);
+  background-color: var(--fill);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 28px;
-  border: outset 5px rgba(255, 254, 254, 0.898);
-  box-shadow: -6px 6px 8px rgba(121, 121, 121, 0.814);
+  border: outset 5px var(--chart);
+  box-shadow: -4px 4px 6px rgba(121, 121, 121, 0.814);
   border-radius: 8px;
   overflow: hidden;
-  display: flex;
   height: 50px;
   align-items: center;
-  margin: 50px;
+  margin: 10px;
 }
 
 .tercero .lista-proyectos {
@@ -305,12 +327,14 @@ p {
 
 .tercero .lista-proyectos .fila {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
 }
 
 .tercero .lista-proyectos .fila .proyectos img {
   width: 250px;
+  margin: 15px;
   border-radius: 15px;
 }
 
@@ -326,8 +350,9 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  height: 70vh;
+  font-family: monospace;
+  font-size: 25px;
 }
 
 .cuarta h2,
@@ -336,8 +361,8 @@ h5 {
 }
 
 .cuarta .formulario .primero,
-.segundo,
-.tercero {
+.cuarta .formulario .segundo,
+.cuarta .formulario .tercero {
   font-size: small;
   display: flex;
   flex-direction: column;
@@ -347,11 +372,14 @@ h5 {
   align-items: flex-start;
   margin: 0;
   gap: 0;
+  padding: 0;
 }
 
 .cuarta .formulario input {
   width: 45vw;
+  border-radius: 15px;
   border-color: aliceblue;
+  padding: 10px;
 }
 
 .cuarta .formulario .tercero {
@@ -363,10 +391,13 @@ h5 {
 }
 
 footer {
-  background-color: rgb(0, 0, 0);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.842);
+  color: black;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: bold;
+  font-family: monospace;
+  font-size: 18px;
+  height: 100px;
 }
 
 footer h5,
@@ -374,7 +405,6 @@ h4 {
   font-weight: lighter;
   display: flex;
   justify-content: center;
-  height: 21px;
   margin: 0;
 }
 
@@ -391,7 +421,6 @@ footer .datos-contacto .datos {
   flex-direction: column;
   justify-content: center;
   text-decoration: none;
-  color: white;
 }
 
 footer .datos-contacto .datos img {
